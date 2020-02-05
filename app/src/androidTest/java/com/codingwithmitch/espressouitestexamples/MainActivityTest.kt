@@ -22,7 +22,7 @@ class MainActivityTest{
 
         // GIVEN
         val activityScenario = ActivityScenario.launch(MainActivity::class.java)
-        val NAME = "Mitch"
+        val NAME = "Bruno"
 
         // Execute and Verify
         onView(withId(R.id.button_launch_dialog)).perform(click())
@@ -44,8 +44,9 @@ class MainActivityTest{
 
         onView(withId(R.id.text_name)).check(matches(withText(NAME)))
 
-        // Is toast displayed and is the message correct?
-        onView(withText(buildToastMessage(NAME))).inRoot(ToastMatcher())
+        // Test if Toast is displayed and the message correct
+        onView(withText(buildToastMessage(NAME)))
+            .inRoot(ToastMatcher())
             .check(matches(isDisplayed()))
     }
 }
