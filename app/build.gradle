@@ -52,7 +52,7 @@ dependencies {
 
     // Mockk.io
     def mockk_version = "1.9.3"
-    androidTestImplementation "io.mockk:mockk-android:$mockk_version"
+    androidTestImplementation "io.mockk:mockk-android:1.9.3"
 
     // androidx.test
     def androidx_test = "1.1.0"
